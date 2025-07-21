@@ -1,47 +1,16 @@
 
-<!-- README.md is generated from README.Rmd. Please edit that file -->
+This repo is made with the purpose of creating a hex map in the shape of
+North Carolina state for the **useR2025!** conference.
 
-# hexwall
+![](nc-hexwall.png)
 
-The `hexwall.R` file contains one function `hexwall()`, which can be
-used to generate an image that neatly arranges a folder of hexagons. It
-makes use of the [ImageMagick](https://www.imagemagick.org/) library via
-the ROpenSci package [magick](https://github.com/ropensci/magick) to
-arrange the images.
+Materials used for this project are:
 
-There are several arguments allowing some control over the function’s
-operation.
+- This repository uses code from the original
+  [hexwall](https://github.com/mitchelloharawild/hexwall) project.
 
-- path: The path to a folder of hexagon stickers (png files are
-  recommended)
-- sticker_row_size: The number of stickers in the longest row
-- sticker_width: The width of each sticker in pixels
-- remove_small: Should hexagons smaller than the sticker_width be
-  removed?
-- remove_size: Should hexagons of an abnormal size be removed?
-- coords: A data.frame of coordinates defining the placement of hexagons
-- scale_coords: Should the coordinates be scaled to the hexagon size?
-- sort_mode: How should the files be sorted?
+- <a href="https://mitchelloharawild.com/blog/user-2018-feature-wall/"
+  class="uri">useR! 2018 feature wall</a> blogpost
 
-``` r
-source("hexwall.R")
-#> Linking to ImageMagick 6.9.12.93
-#> Enabled features: cairo, fontconfig, freetype, heic, lcms, pango, raw, rsvg, webp
-#> Disabled features: fftw, ghostscript, x11
-hexwall("samplehex", sticker_row_size = 3, sticker_width = 200)
-#> Warning: `invoke()` was deprecated in purrr 1.0.0.
-#> ℹ Please use `exec()` instead.
-#> This warning is displayed once every 8 hours.
-#> Call `lifecycle::last_lifecycle_warnings()` to see where this warning was
-#> generated.
-```
-
-<img src="README_files/figure-gfm/example-1.png" width="600" />
-
-# Usage
-
-1.  [Download the
-    repository](https://github.com/mitchelloharawild/hexwall/archive/master.zip)
-2.  Unzip and open the R project (`hexwall.Rproj`)
-3.  Run `source("hexwall.R")`
-4.  Ready to go, use the `hexwall()` function to make your hexagon wall.
+- <a href="https://r-spatial.github.io/sf/articles/sf5.html"
+  class="uri">{sf} Plotting Simple Features</a>
